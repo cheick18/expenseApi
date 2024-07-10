@@ -14,15 +14,7 @@ app.post('/AddData', async (req, res) => {
 
         
       const { url, hook} = req.body; 
-      /*
-      const simulatedDatabase = [];
-
-    simulatedDatabase.push({
-      url,
-      hook,
-      timestamp: new Date()
-    });
-*/
+     
 const saveUrl= await addDoc(collection(dbNode, "MappingTable"), {
     url,
     hook,
